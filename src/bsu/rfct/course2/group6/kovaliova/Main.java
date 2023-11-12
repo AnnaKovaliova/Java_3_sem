@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) throws Exception {
         Food[] breakfast = new Food[20];
         Scanner scanner = new  Scanner(System.in);
-        
+        int countBurger = 0;
         System.out.println("Введите завтрак:");
 
         String input = scanner.nextLine();
@@ -23,15 +23,23 @@ public class Main {
             } else if (parts[0].equals("Apple")) {
                 breakfast[itemsSoFar] = new Apple(parts[1]);
             } else if (parts[0].equals("Burger")){
+                countBurger++;
                 breakfast[itemsSoFar] = new Burger(parts[1]);
             }
             itemsSoFar++;
         }
-    for (Food item: breakfast)
+
+        
+    for (Food item: breakfast){
         if (item!=null)
             item.consume();
         else
             break;
     
+    }
+
+    
+    System.out.print("Колличество бургеров: ");
+    System.out.println(countBurger);
     }
 }
