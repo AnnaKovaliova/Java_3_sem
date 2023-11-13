@@ -42,11 +42,11 @@ public class MainFrame extends JFrame {
     private int memoryId = 0;
 
     public Double calculate1(Double x, Double y, Double z) {
-        return Math.pow(Math.pow(Math.log(1 + x), 2) + Math.cos(Math.PI) * Math.pow(z,3), Math.sin(y)) + Math.pow(Math.pow(Math.E,Math.pow(x,2)) + Math.cos(Math.pow(Math.E,z)) + Math.sqrt(1/y),1/x) ;
+        return Math.pow(Math.cos(Math.pow(Math.E,x)+Math.log(Math.pow(1+y,2)))+ Math.sqrt(Math.pow(Math.E, Math.cos(x))+Math.pow(Math.sin(Math.PI*z),2))+Math.sqrt(1/x)+Math.pow(Math.cos(y),2),Math.sin(z));
     }
 
     public Double calculate2(Double x, Double y, Double z) {
-        return x*(Math.pow(Math.cos(Math.pow(y,2)),3 )/Math.pow(z,1/x) );
+        return Math.pow(1+Math.pow(x,2),1/y)/Math.pow(Math.E,Math.sin(z)+x);
     }
 
     private JRadioButton addRadioButton(String buttonName, final int Id, radioButtonsType Type) {
