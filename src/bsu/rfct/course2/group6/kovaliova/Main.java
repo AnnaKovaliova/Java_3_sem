@@ -12,7 +12,7 @@ public class Main {
         System.out.println("Введите завтрак:");
 
         String input = scanner.nextLine();
-        String[] buff = input.split(" ");
+        String[] buff = input.split(" ");   //разбивает строку на массив строк путём разделения строки указанной подстрокой
 
         int itemsSoFar = 0;
 

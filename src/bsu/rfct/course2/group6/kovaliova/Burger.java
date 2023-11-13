@@ -25,6 +25,6 @@ public class Burger extends Food{
         return false;
     }
     public String toString() {
-        return super.toString() + " размера '" + size.toUpperCase() + "'";
+        return super.toString() + " размера '" + size.toUpperCase() + "'"; //функция, выз.родительский конструктор(объект)
     }
 }
