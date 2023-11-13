@@ -101,6 +101,7 @@ public class MainFrame extends JFrame {
         JLabel labelForX = new JLabel("X:");
         textFieldX = new JTextField("0", 10); 
         textFieldX.setMaximumSize(textFieldX.getPreferredSize()); 
+        //getContentPane().add(contentBox, BorderLayout.CENTER);
         
         JLabel labelForY = new JLabel("Y:");
         textFieldY = new JTextField("0", 10); 
@@ -137,8 +138,6 @@ public class MainFrame extends JFrame {
         
         hBoxMemRadioButton.add(Box.createHorizontalGlue());
         
-        
-
         Box hBoxMemButton = Box.createHorizontalBox();
 
         JButton buttonMemClear = new JButton("MC"); 
@@ -169,21 +168,7 @@ public class MainFrame extends JFrame {
         
         
 
-        // Создать область для вывода результата
-        JLabel labelForResult = new JLabel("Результат:"); 
-        //labelResult = new JLabel("0");
-        textFieldResult = new JTextField("0", 10); 
-        textFieldResult.setMaximumSize(
-        textFieldResult.getPreferredSize());
-
-        Box hboxResult = Box.createHorizontalBox();
-        hboxResult.add(Box.createHorizontalGlue()); 
-        hboxResult.add(labelForResult); 
-        hboxResult.add(Box.createHorizontalStrut(10));
-        hboxResult.add(textFieldResult);
-        hboxResult.add(Box.createHorizontalGlue());
-
-        hboxResult.setBorder(BorderFactory.createLineBorder(Color.BLUE)); 
+       
         // Создать область для кнопок
         JButton buttonCalc = new JButton("Вычислить"); 
         buttonCalc.addActionListener(new ActionListener() {
@@ -234,4 +219,19 @@ public class MainFrame extends JFrame {
         contentBox.add(Box.createVerticalGlue()); 
         getContentPane().add(contentBox, BorderLayout.CENTER);
     }
+     // Создать область для вывода результата
+        JLabel labelForResult = new JLabel("Результат:"); 
+        //labelResult = new JLabel("0");
+        textFieldResult = new JTextField("0", 10); 
+        textFieldResult.setMaximumSize(
+        textFieldResult.getPreferredSize());
+
+        Box hboxResult = Box.createHorizontalBox();
+        hboxResult.add(Box.createHorizontalGlue()); 
+        hboxResult.add(labelForResult); 
+        hboxResult.add(Box.createHorizontalStrut(10));
+        hboxResult.add(textFieldResult);
+        hboxResult.add(Box.createHorizontalGlue());
+
+        hboxResult.setBorder(BorderFactory.createLineBorder(Color.BLUE)); 
 }
