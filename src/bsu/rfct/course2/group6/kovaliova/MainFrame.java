@@ -116,17 +116,32 @@ public class MainFrame extends JFrame {
         
         BorderFactory.createLineBorder(Color.RED)); 
         //hboxVariables.add(Box.createHorizontalGlue()); 
+        
+        hboxVariables.add(Box.createHorizontalStrut(10));
+       // hboxVariables.add(Box.createHorizontalGlue()); 
         hboxVariables.add(labelForX); 
-        hboxVariables.add(Box.createHorizontalStrut(10)); 
+        hboxVariables.add(Box.createHorizontalStrut(1));
         hboxVariables.add(textFieldX); 
-        hboxVariables.add(Box.createHorizontalGlue()); 
+       // hboxVariables.add(Box.createHorizontalGlue());
+        hboxVariables.add(Box.createHorizontalStrut(10));
+ 
+hboxVariables.add(Box.createHorizontalStrut(10));
+        // hboxVariables.add(Box.createHorizontalGlue()); 
         hboxVariables.add(labelForY); 
-        hboxVariables.add(Box.createHorizontalStrut(10));
+        hboxVariables.add(Box.createHorizontalStrut(1));
         hboxVariables.add(textFieldY); 
-        hboxVariables.add(Box.createHorizontalGlue()); 
-        hboxVariables.add(labelForZ); 
+        //hboxVariables.add(Box.createHorizontalGlue()); 
         hboxVariables.add(Box.createHorizontalStrut(10));
+
+hboxVariables.add(Box.createHorizontalStrut(10));
+        //hboxVariables.add(Box.createHorizontalGlue());
+        hboxVariables.add(labelForZ); 
+        hboxVariables.add(Box.createHorizontalStrut(1));
         hboxVariables.add(textFieldZ); 
+       // hboxVariables.add(Box.createHorizontalGlue()); 
+        hboxVariables.add(Box.createHorizontalStrut(10));
+
+    
         //hboxVariables.add(Box.createHorizontalGlue());
                     
         //Память
@@ -168,7 +183,8 @@ public class MainFrame extends JFrame {
         
         
 
-       
+        
+        
         // Создать область для кнопок
         JButton buttonCalc = new JButton("Вычислить"); 
         buttonCalc.addActionListener(new ActionListener() {
@@ -200,7 +216,24 @@ public class MainFrame extends JFrame {
             textFieldZ.setText("0");
             textFieldResult.setText("0");
         } 
+
     });
+    // Создать область для вывода результата
+     JLabel labelForResult = new JLabel("Результат:"); 
+        //labelResult = new JLabel("0");
+        textFieldResult = new JTextField("0", 12); 
+        textFieldResult.setMaximumSize( textFieldResult.getPreferredSize());
+
+        Box hboxResult = Box.createHorizontalBox();
+        hboxResult.add(Box.createHorizontalGlue()); 
+        hboxResult.add(labelForResult); 
+        hboxResult.add(Box.createHorizontalStrut(10));
+        hboxResult.add(textFieldResult);
+        hboxResult.add(Box.createHorizontalGlue());
+
+        hboxResult.setBorder(BorderFactory.createLineBorder(Color.BLUE));
+
+
         Box hboxButtons = Box.createHorizontalBox(); 
         hboxButtons.add(Box.createHorizontalGlue()); 
         hboxButtons.add(buttonCalc); 
@@ -219,19 +252,4 @@ public class MainFrame extends JFrame {
         contentBox.add(Box.createVerticalGlue()); 
         getContentPane().add(contentBox, BorderLayout.CENTER);
     }
-     // Создать область для вывода результата
-        JLabel labelForResult = new JLabel("Результат:"); 
-        //labelResult = new JLabel("0");
-        textFieldResult = new JTextField("0", 10); 
-        textFieldResult.setMaximumSize(
-        textFieldResult.getPreferredSize());
-
-        Box hboxResult = Box.createHorizontalBox();
-        hboxResult.add(Box.createHorizontalGlue()); 
-        hboxResult.add(labelForResult); 
-        hboxResult.add(Box.createHorizontalStrut(10));
-        hboxResult.add(textFieldResult);
-        hboxResult.add(Box.createHorizontalGlue());
-
-        hboxResult.setBorder(BorderFactory.createLineBorder(Color.BLUE)); 
 }
