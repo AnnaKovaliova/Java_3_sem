@@ -6,12 +6,9 @@ import java.awt.Color;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
-
 import javax.swing.BorderFactory;
 import javax.swing.Box;
 import javax.swing.ButtonGroup;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -30,17 +27,12 @@ public class MainFrame extends JFrame {
     private static final int WIDTH = 650;
     private static final int HEIGHT = 320;
 
-   
     private JTextField textFieldX;
     private JTextField textFieldY;
     private JTextField textFieldZ;
-    
     private Double[] memCell = new Double[3];
-
     private JTextField textFieldResult;
     private JLabel labelForMemory = new JLabel("0.0", 10);
-
-
 
     private ButtonGroup radioButtons = new ButtonGroup();
     private ButtonGroup radioButtons2 = new ButtonGroup();
@@ -49,12 +41,9 @@ public class MainFrame extends JFrame {
     private int formulaId = 1;
     private int memoryId = 0;
 
-    //ТУТ ПОМЕНЯТЬ
-
     public Double calculate1(Double x, Double y, Double z) {
         return Math.pow(Math.pow(Math.log(1 + x), 2) + Math.cos(Math.PI) * Math.pow(z,3), Math.sin(y)) + Math.pow(Math.pow(Math.E,Math.pow(x,2)) + Math.cos(Math.pow(Math.E,z)) + Math.sqrt(1/y),1/x) ;
     }
-
 
     public Double calculate2(Double x, Double y, Double z) {
         return x*(Math.pow(Math.cos(Math.pow(y,2)),3 )/Math.pow(z,1/x) );
