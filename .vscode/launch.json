@@ -1,0 +1,12 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "MainFrame",
+            "request": "launch",
+            "mainClass": "bsu.rfct.course2.group6.kovaliova.MainFrame",
+            "projectName": "java3sem_9c7195f3",
+            "args": "2"
+        }
+    ]
+}
