@@ -52,16 +52,21 @@ public class GornerTableModel extends AbstractTableModel {
         };
     }
     public Class<?> getColumnClass(int col) {
-        return Double.class;
+        return switch(col){
+            case 0 -> Double.class;
+            case 1 -> Double.class;
+            case 2 -> Boolean.class;
+            default -> Double.class;
+        };
     }
 
-    private double aboveZero(double x){
+    private boolean aboveZero(double x){
         double gorner = calculateHorner(x);
         if(gorner > 0){
-            return 1;
+            return true;
         }
         else{
-            return 0;
+            return false;
         }
     }
 
